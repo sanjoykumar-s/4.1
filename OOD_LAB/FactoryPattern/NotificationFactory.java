@@ -1,5 +1,12 @@
 public class NotificationFactory {
-    public Notification getNotification(String notificationType) {
+    
+
+    public static NotificationFactory instance = new NotificationFactory();
+
+    private NotificationFactory(){}
+    
+    public Notification createNotification(String notificationType) {
+       
         if(notificationType.equalsIgnoreCase("SMS")) {
             return new SMSNotification();
         }
@@ -10,6 +17,10 @@ public class NotificationFactory {
             return new PushNotification();
         }
         return null;
+    }
+
+    public static NotificationFactory getInstance() {
+        return instance;
     }
     
 }
