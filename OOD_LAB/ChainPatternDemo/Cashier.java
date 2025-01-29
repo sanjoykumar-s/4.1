@@ -6,6 +6,6 @@ public class Cashier extends AbstractProcess {
 
     @Override
     protected void write(String message) {
-        System.out.println(message + " Cashier");
+        System.out.println(message + " Cashier.\n");
     }
 }

@@ -4,8 +4,6 @@ public abstract class AbstractProcess {
     public static int SENIOR_OFFICER = 2;
     public static int MANAGER = 3;
 
-    public static int cur = 1;
-
     protected int level;
 
     protected AbstractProcess nextPerson;
@@ -14,22 +12,23 @@ public abstract class AbstractProcess {
         this.nextPerson = nextPerson;
     }
 
-    public void statusMessage (int level, String message) {
-        if(this.level <= level) {
-            write(message);
+    public void statusMessage (int level, int amount) {
+        if(level - this.level < 2) {
+            write("This Withdraw request of amount: " + Integer.toString(amount) + " is processed by");
         }
-        if(nextPerson!=null && this.level <= cur) {
+        if(nextPerson!=null && this.level < level) {
             String to;
-            if(cur == 1) {
+            if(this.level == 1) {
                 to = "Senior Officer";
-                cur++;
             }
-            else {
+            else{
                 to = "Manager";
-                cur++;
             }
-            System.out.println("Process is sending to " + to + "...");
-            nextPerson.statusMessage(level, message);
+            System.out.println("Please Wait... Process is sending to " + to + "...\n");
+            nextPerson.statusMessage(level, amount);
+        }
+        else {
+            System.out.println("Amount: " + Integer.toString(amount) + " is Paid.\n");
         }
     }
 

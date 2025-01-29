@@ -6,6 +6,6 @@ public class SeniorOfficer extends AbstractProcess{
 
     @Override
     protected void write(String message) {
-        System.out.println(message + " Senior Officer");
+        System.out.println(message + " Senior Officer.\n");
     }
 }

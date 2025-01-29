@@ -6,6 +6,6 @@ public class Manager extends AbstractProcess{
 
     @Override
     protected void write(String message) {
-        System.out.println(message + " Manager");
+        System.out.println(message + " Manager.\n");
     }
 }
