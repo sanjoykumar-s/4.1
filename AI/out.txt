@@ -1,0 +1,136 @@
+Goal State:
+|1|2|3|
+|8|0|4|
+|7|6|5|
+
+Initial State:
+|2|8|3|
+|1|6|4|
+|7|0|5|
+
+UP:
+|2|8|3|
+|1|0|4|
+|7|6|5|
+Cost of this move: 4
+
+Left:
+|2|8|3|
+|1|6|4|
+|0|7|5|
+Cost of this move: 6
+
+Right:
+|2|8|3|
+|1|6|4|
+|7|5|0|
+Cost of this move: 6
+
+--------------------------------
+| Smallest Selection Cost: 4   |
+|------------------------------|
+| Optimal Selected Move: UP    |
+--------------------------------
+
+Current State:
+|2|8|3|
+|1|0|4|
+|7|6|5|
+
+UP:
+|2|0|3|
+|1|8|4|
+|7|6|5|
+Cost of this move: 5
+
+Left:
+|2|8|3|
+|0|1|4|
+|7|6|5|
+Cost of this move: 5
+
+Right:
+|2|8|3|
+|1|4|0|
+|7|6|5|
+Cost of this move: 6
+
+--------------------------------
+| Smallest Selection Cost: 5   |
+|------------------------------|
+| Optimal Selected Move: UP    |
+--------------------------------
+
+Current State:
+|2|0|3|
+|1|8|4|
+|7|6|5|
+
+Left:
+|0|2|3|
+|1|8|4|
+|7|6|5|
+Cost of this move: 5
+
+Right:
+|2|3|0|
+|1|8|4|
+|7|6|5|
+Cost of this move: 7
+
+--------------------------------
+| Smallest Selection Cost: 5   |
+|------------------------------|
+| Optimal Selected Move: Left  |
+--------------------------------
+
+Current State:
+|0|2|3|
+|1|8|4|
+|7|6|5|
+
+Down:
+|1|2|3|
+|0|8|4|
+|7|6|5|
+Cost of this move: 5
+
+--------------------------------
+| Smallest Selection Cost: 5   |
+|------------------------------|
+| Optimal Selected Move: Down  |
+--------------------------------
+
+Current State:
+|1|2|3|
+|0|8|4|
+|7|6|5|
+
+Down:
+|1|2|3|
+|7|8|4|
+|0|6|5|
+Cost of this move: 7
+
+Right:
+|1|2|3|
+|8|0|4|
+|7|6|5|
+Cost of this move: 5
+
+--------------------------------
+| Smallest Selection Cost: 5   |
+|------------------------------|
+| Optimal Selected Move: Right |
+--------------------------------
+
+Current State:
+|1|2|3|
+|8|0|4|
+|7|6|5|
+
+----------------
+| Goal Reached |
+|--------------|
+| G(n) = 6     |
+----------------
